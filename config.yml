@@ -1,0 +1,34 @@
+---
+#template: Hello, %s!
+#defaultName: ${DW_DEFAULT_NAME:-Stranger}
+# Database settings.
+database:
+  # the name of your JDBC driver
+  driverClass: com.mysql.cj.jdbc.Driver
+  # the username
+  user: root
+  # the password
+  password: user@123
+  # the JDBC URL
+  url: jdbc:mysql://localhost:3306/blog
+# use the simple server factory if you only want to run on a single port
+# server:
+#   type: simple
+#   connector:
+#     type: http
+#     port: 8080
+# Logging settings.
+logging:
+  # The default level of all loggers.
+  # Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  # Logger-specific levels.
+  loggers:
+    # Sets the level for 'com.example.app' to DEBUG.
+    com.example.app: DEBUG
+    # Redirects SQL logs to a separate file
+    org.hibernate.SQL:
+      level: DEBUG
+
+jwtSecretKey: OB7JghrFDjYb9mklnqCSikWihBxjlJOdkLFE+R+omiY=
+jwtExpirationTime: 360000
